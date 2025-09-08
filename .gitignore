@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cypress test ciktilari
+cypress/videos/
+cypress/screenshots/
+
+# Calisma aninda olusabilecek gecici dosyalar
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA
+.idea/
+
+# VS Code (projeyi baska IDE’de acarsan)
+.vscode/
+
+# Ortam degiskenleri
+.env
+.env.local
