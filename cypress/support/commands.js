@@ -23,3 +23,31 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Herhangi bir Popup, Cookie vb. bir elementi kapatmak istersek bir functionin icine aliyoruz bunu
+// helper  fonksiyonu olarak kullanabiliriz.
+// bu fonksiyon popup, cookie vb bir element var mi kontrol  eder, bulursa tiklar
+// element yoksa yoluna devam eder
+
+// <reference types="cypress" />
+
+// Yuklendigini anlamak icin log
+console.log('[commands.js] loaded')
+
+Cypress.Commands.add('handleOptionalPopups', () => {
+  const selectors = [
+    '.flex-wrap > .flex-row > .btn.primary',   // Çerez kabul et
+    '#announcement-modal .icon-only',          // Reklam kapatma
+    '.newsletter-popup .close-btn'             // Newsletter kapatma
+  ]
+
+  selectors.forEach((selector) => {
+    // DOM hazir mi ve element var mi kontrol et
+    cy.document().then((doc) => {
+      const el = doc.querySelector(selector)
+      if (el) {
+        cy.wrap(el).click({ force: true })
+      }
+    })
+  })
+})
