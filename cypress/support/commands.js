@@ -51,3 +51,10 @@ Cypress.Commands.add('handleOptionalPopups', () => {
     })
   })
 })
+
+Cypress.Commands.add('automationexerciseLogin',(username,password)=>{
+  cy.visit('https://www.automationexercise.com/login')
+  cy.get('[data-qa="login-email"]').type(username)
+  cy.get('[data-qa="login-password"]').type(password)
+  cy.get('[data-qa="login-button"]').click()
+})
