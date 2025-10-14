@@ -58,3 +58,10 @@ Cypress.Commands.add('automationexerciseLogin',(username,password)=>{
   cy.get('[data-qa="login-password"]').type(password)
   cy.get('[data-qa="login-button"]').click()
 })
+
+Cypress.Commands.add('amazonSearch',(productName)=>{
+  cy.visit('https://www.amazon.com')
+  cy.get('#twotabsearchtextbox').type(productName)
+  cy.get('#nav-search-submit-button').click()
+  cy.get('#twotabsearchtextbox').should('have.value',productName)
+})
