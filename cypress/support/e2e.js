@@ -25,3 +25,5 @@ Cypress.on('uncaught:exception', () => false)
 require('cypress-xpath')
 
 require('cypress-iframe')
+
+import 'cypress-file-upload';
