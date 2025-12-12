@@ -194,6 +194,7 @@ Projeyi yerel ortamınızda ayağa kaldırmak ve çalıştırmak için aşağıd
 | **`npx cypress run --browser chrome --headed`** | Chrome tarayıcısını **Görünür** (`headed`) modda açarak tüm testleri çalıştırır. |
 | **`npx cypress run --spec 'cypress/e2e/day02/'`** | Sadece `day02` klasöründeki tüm testleri çalıştırır. |
 
+
 ---
 
 # :globe_with_meridians: TestAutomationWithCypress E2E Project
