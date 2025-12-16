@@ -182,8 +182,9 @@ cy.get('#upload').attachFile('test.pdf');
 
 ## 🧠 10. VS Code Önerilen Eklentiler
 
-- Cypress Snippets
-- Cypress Fixture IntelliSense
-- ES6 Mocha Snippets
-- Bracket Pair Colorization
-- Postman
+- Cypress Snippets — Sık kullanılan Cypress komutları için kısa yollar.
+- Cypress Fixture IntelliSense — Fixtures dosyalarını kolay çağırmayı sağlar.
+- ES6 Mocha Snippets — describe, it, hook'lar için hızlı tamamlama.
+- Bracket Pair Colorization — Parantez, blok gibi kod yapılarını renkli gösterir.
+- Postman - API’leri ayrıca bir Postman açmaya gerek duyamadan hızlıca test etmek ve doğrulamak için kullanılır.
+
