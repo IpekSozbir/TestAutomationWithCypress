@@ -188,3 +188,19 @@ cy.get('#upload').attachFile('test.pdf');
 - Bracket Pair Colorization — Parantez, blok gibi kod yapılarını renkli gösterir.
 - Postman - API’leri ayrıca bir Postman açmaya gerek duyamadan hızlıca test etmek ve doğrulamak için kullanılır.
 
+
+## 11. ✅ Kurulum Doğrulama Kontrol Listesi
+
+Bu bölüm, Cypress test ortamının yerel makinede doğru şekilde
+hazırlandığını hızlıca doğrulamak için referans olarak kullanılmalıdır.
+
+- [ ] Node.js ve npm yüklü
+- [ ] Proje dizini oluşturuldu
+- [ ] `package.json` dosyası mevcut
+- [ ] Cypress `devDependency` olarak kuruldu
+- [ ] `npx cypress open` komutu sorunsuz çalışıyor
+- [ ] Varsayılan örnek dosyalar temizlendi
+- [ ] Gerekli eklentiler kuruldu (XPath, Faker, iFrame, File Upload)
+- [ ] VS Code uzantıları yüklendi
+- [ ] `cypress.config.js` temel ayarları içeriyor
+- [ ] İlk test dosyası yazıldı ve başarıyla çalıştırıldı
