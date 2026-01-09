@@ -172,7 +172,7 @@ Projeyi yerel ortamınızda ayağa kaldırmak ve çalıştırmak için aşağıd
 
 1.  **Depoyu Klonlayın:**
     ```bash
-    git clone [https://github.com/KULLANICI_ADINIZ/TestAutomationWithCypress.git](https://github.com/KULLANICI_ADINIZ/TestAutomationWithCypress.git)
+    git clone https://github.com/IpekSozbir/TestAutomationWithCypress.git
     cd TestAutomationWithCypress
     ```
 2.  **Bağımlılıkları Kurun:**
@@ -341,7 +341,7 @@ Follow the steps below to set up and run the project in your local environment.
 
 1. **Clone the Repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/TestAutomationWithCypress.git](https://github.com/KULLANICI_ADINIZ/TestAutomationWithCypress.git)
+    git clone https://github.com/IpekSozbir/TestAutomationWithCypress.git
     cd TestAutomationWithCypress
     ```
 2. **Install Dependencies:**
