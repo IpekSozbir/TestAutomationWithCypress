@@ -173,7 +173,7 @@ Projeyi yerel ortamınızda ayağa kaldırmak ve çalıştırmak için aşağıd
 1.  **Depoyu Klonlayın:**
     ```bash
     git clone https://github.com/IpekSozbir/TestAutomationWithCypress.git
-    cd TestAutomationWithCypress
+   
     ```
 2.  **Bağımlılıkları Kurun:**
     ```bash
