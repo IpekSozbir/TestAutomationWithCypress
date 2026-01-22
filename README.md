@@ -342,7 +342,7 @@ Follow the steps below to set up and run the project in your local environment.
 1. **Clone the Repository:**
     ```bash
     git clone https://github.com/IpekSozbir/TestAutomationWithCypress.git
-    cd TestAutomationWithCypress
+    
     ```
 2. **Install Dependencies:**
     ```bash
