@@ -17,7 +17,7 @@ Bu otomasyon projesinde kullanılan temel teknolojiler ve ek kütüphaneler:
 
 ### 📁 Proje Yapısı ve Gelişim Takvimi
 
-Proje, 9 günlük bir eğitim/geliştirme planına göre yapılandırılmış ve her günün testleri ayrı bir dizinde toplanmıştır.
+Proje, 10 günlük bir eğitim/geliştirme planına göre yapılandırılmış ve her günün testleri ayrı bir dizinde toplanmıştır.
 
 ```
 TestAutomationWithCypress/ 
@@ -196,19 +196,27 @@ Projeyi yerel ortamınızda ayağa kaldırmak ve çalıştırmak için aşağıd
 
 ---
 
-# :globe_with_meridians: TestAutomationWithCypress E2E Project
+# 🌐 TestAutomationWithCypress E2E Project
+
 This repository contains **End-to-End (E2E) test automation** exercises for modern web applications. The project is developed using the **Cypress** framework and **JavaScript**, a fast, reliable, and modern testing tool. The work covers a wide range of topics, from basic Cypress commands (Element Interactions) to advanced subjects (Custom Commands, POM, API Interception, Faker, and Fixtures).
+
 ---
-## :hammer_and_wrench: Technologies and Dependencies
+
+## 🛠️ Technologies and Dependencies
+
 The core technologies and supplementary libraries used in this automation project are:
+
 * **Cypress:** The main E2E test framework.
 * **JavaScript:** The test scripting language.
 * **Mocha/Chai:** Test structure (`describe`, `it`, `context`) and Assertion libraries.
 * **`@faker-js/faker`:** For generating random and realistic test data.
 * **`cypress-file-upload`:** To facilitate file upload testing.
 * **`cypress-iframe`:** For interacting with elements inside Iframes.
-### :file_folder: Project Structure and Development Timeline
-The project is structured according to a 9-day training/development plan, with each day's tests gathered in a separate directory.
+
+### 📁 Project Structure and Development Timeline
+
+The project is structured according to a 10-day training/development plan, with each day's tests gathered in a separate directory.
+
 ```
 TestAutomationWithCypress/
 ├── cypress/
@@ -234,17 +242,24 @@ TestAutomationWithCypress/
 ├── package.json           # Defines the project name, version, and all dependencies (Cypress, Faker, etc.) here.
 └── README.md
 ```
+
 ---
-## :dart: Covered Automation Topics (Detailed List)
+
+## 🎯 Covered Automation Topics (Detailed List)
+
 This section summarizes the key topics covered in the daily test files.
-### :spiral_calendar_pad: Day 01: Basic Cypress and Mocha Commands
+
+### 🗓️ Day 01: Basic Cypress and Mocha Commands
+
 | Topic | Description | Example Commands |
 | :--- | :--- | :--- |
 | **`cy.visit()`** | Page navigation. Used with Base URL (`/path`) or full URL. | ``cy.visit('/')``, ``cy.visit('http://www.site.com')`` |
 | **`cy.title()`** | Getting and asserting the page title. Assertions via regex, exact match (`eq`), and inclusion (`include`). | ``cy.title().should('match', /regex/)``, ``cy.title().should('include','...')`` |
 | **`cy.url() & cy.location()`** | Asserting the current URL and its components (pathname, protocol, hostname). | ``cy.url().should('eq', '...')``, ``cy.location('pathname').should('eq', '/path')`` |
 | **Mocha Structure** | Defining test blocks (`describe`, `it`) and using `context` as an alternative. | ``describe('Test Name', () => {})``, ``it('Scenario Name', () => {})`` |
-### :spiral_calendar_pad: Day 02: Test Setup, Element Locators, and Assertions
+
+### 🗓️ Day 02: Test Setup, Element Locators, and Assertions
+
 | Topic | Description | Example Commands |
 | :--- | :--- | :--- |
 | **`beforeEach` Hook** | Setup steps that run before each test (`it` block) (e.g., `cy.visit('/')`, closing a pop-up). | ``beforeEach(() => { ... })`` |
@@ -252,7 +267,9 @@ This section summarizes the key topics covered in the daily test files.
 | **Custom Command Usage** | Defining repetitive operations (e.g., Pop-up closing) in `commands.js` and calling them with `cy.`. | ``cy.handleOptionalPopups()`` |
 | **Basic Interactions** | Searching (`.type('{enter}')`), Clicking a button (`.click()`), Filling out a login form. | ``cy.get('#search').type('film{enter}')`` |
 | **Assertion Types** | Asserting an element's text, visibility, or URL using methods like **have.text**, **include**, **be.visible**, **have.value**, **equal**. | ``cy.get('h2').should('be.visible')``, ``cy.title().should('equal', 'Title')`` |
-### :spiral_calendar_pad: Day 03: Scenario Flow and Advanced Mocha Commands
+
+### 🗓️ Day 03: Scenario Flow and Advanced Mocha Commands
+
 | Topic | Description | Example Commands |
 | :--- | :--- | :--- |
 | **Positive/Negative Testing** | Asserting different error messages with successful (`Positive`) and unsuccessful (`Negative`) login scenarios. | ``cy.get('.error-message').should('be.visible')`` |
@@ -261,7 +278,9 @@ This section summarizes the key topics covered in the daily test files.
 | **Navigation Commands** | Moving backward/forward in the browser history and refreshing the page. | ``cy.go('back')`` / ``cy.go(-1)``, ``cy.go('forward')`` / ``cy.go(1)``, ``cy.reload(true)`` |
 | **Functional Assertion** | Breaking the Cypress command chain to perform manual assertion using Mocha/Chai's `expect` function. | ``cy.get('h2').then(text => { expect(text.text()).to.contains('...') })`` |
 | **Viewport Size** | Setting the screen size with the `cy.viewport()` command or in `cypress.config.js`. | ``cy.viewport(1366, 768)`` |
-### :spiral_calendar_pad: Day 04: Advanced UI Interactions
+
+### 🗓️ Day 04: Advanced UI Interactions
+
 | Topic | Description | Example Commands |
 | :--- | :--- | :--- |
 | **Dropdown Menu** | Selecting an option based on the element's **value** or visible text using the `select()` command. | ``cy.get('#dropdown').select('Option 1').should('have.value','1')`` |
@@ -270,8 +289,9 @@ This section summarizes the key topics covered in the daily test files.
 | **Checkbox Management** | Selecting or deselecting elements using `check()` and `uncheck()` commands. Selection can be collective or by index. | ``cy.get(':checkbox').check()``, ``cy.get('input').eq(1).uncheck()`` |
 | **JavaScript Alerts** | Handling **Alert** (OK), **Confirm** (OK/Cancel), and **Prompt** (Input) windows. Use `cy.on('window:confirm', () => false)` to cancel. | ``cy.on('window:confirm', ...)`` |
 | **Super Domain Issue** | Understanding the Cypress limitation of not being able to use `cy.visit()` to two different domains within a single test (`it` block). | N/A |
+
 ---
-3:52
+
 ## :dart: Covered Automation Topics (Detailed List)
 
 This section summarizes the key topics covered in the daily test files.
@@ -340,19 +360,18 @@ Follow the steps below to set up and run the project in your local environment.
 ### Setup and Execution
 
 1. **Clone the Repository:**
-    ```bash
-    git clone https://github.com/IpekSozbir/TestAutomationWithCypress.git
-    
-    ```
+    ```bash
+    git clone https://github.com/IpekSozbir/TestAutomationWithCypress.git
+    ```
 2. **Install Dependencies:**
-    ```bash
-    npm install
-    ```
+    ```bash
+    npm install
+    ```
 3. **Open the Cypress Test Runner:**
-    The following command launches the Cypress application.
-    ```bash
-    npx cypress open
-    ```
+    The following command launches the Cypress application.
+    ```bash
+    npx cypress open
+    ```
 
 ### CLI (Command Line Interface) Run Commands
 
@@ -361,4 +380,4 @@ Follow the steps below to set up and run the project in your local environment.
 | **`npx cypress open`** | Opens the Test Runner (Allows selection of Browser and Tests). |
 | **`npx cypress run`** | Runs all tests in **Headless** mode (without opening a browser) with **Electron**, capturing screenshots/video recordings. |
 | **`npx cypress run --browser chrome --headed`** | Runs all tests using the Chrome browser in **Headed** (visible) mode. |
-| **`npx cypress run --spec 'cypress/e2e/day02/'`** | Runs only the tests within the `day02` folder. |
+| **`npx cypress run --spec 'cypress/e2e/day02/'`** | Runs only the tests within the `day02` folder. 
